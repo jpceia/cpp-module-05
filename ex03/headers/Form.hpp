@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 22:52:32 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 04:53:16 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 19:43:11 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ public:
     virtual ~Form();
 
     // Assignment operator overload
-    Form& operator=(Form const &rhs);
+    virtual Form& operator=(Form const &rhs);
 
     // Getters
     std::string getName(void) const;
