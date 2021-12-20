@@ -6,17 +6,18 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 23:14:20 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/17 23:28:40 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 04:56:02 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
+
 Form::Form(void) :
     _name(""),
     _signed(false),
-    _grade(150)
+    _grade(0)
 {
 }
 

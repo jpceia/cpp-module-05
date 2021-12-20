@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 22:52:32 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/17 23:24:11 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 04:51:54 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ private:
     bool _signed;
     const int _grade;
 
+protected:
     Form(void);
+
 public:
     // Constructors
     Form(std::string name, int grade);

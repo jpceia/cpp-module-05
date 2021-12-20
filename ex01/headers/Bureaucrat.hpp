@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:19:53 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/17 23:23:47 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 04:55:28 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ private:
 
     void checkGrade(int grade);
 
-    Bureaucrat(void);
+protected:
+    Bureaucrat(void) {}
+
 public:
     // Constructors
     Bureaucrat(std::string name, int grade);

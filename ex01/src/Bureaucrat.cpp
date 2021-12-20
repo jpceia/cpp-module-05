@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:37:05 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/17 23:27:53 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 04:55:59 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 #include "Form.hpp"
 #include <iostream>
 
-Bureaucrat::Bureaucrat(void)
-{
-}
 
 Bureaucrat::Bureaucrat(std::string name, int grade)
     : _name(name), _grade(grade)
