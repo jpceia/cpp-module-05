@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:37:05 by jpceia            #+#    #+#             */
-/*   Updated: 2021/11/20 01:49:20 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 19:48:56 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,15 @@ Bureaucrat::Bureaucrat(const std::string& name, int grade)
     #ifdef DEBUG
     std::cout << "Bureaucrat standard constructor called" << std::endl;
     #endif
-    if (grade < 1)
-        throw Bureaucrat::GradeTooHighException();
-    else if (grade > 150)
-        throw Bureaucrat::GradeTooLowException();
+    checkGrade(grade);
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const &rhs)
+    : _name(rhs._name), _grade(rhs._grade)
 {
     #ifdef DEBUG
     std::cout << "Bureaucrat copy constructor called" << std::endl;
     #endif
-    *this = rhs;
 }
 
 Bureaucrat::~Bureaucrat()
@@ -45,8 +42,8 @@ Bureaucrat& Bureaucrat::operator=(Bureaucrat const &rhs)
 {
     if (this != &rhs)
     {
-        _name = rhs.getName();
-        _grade = rhs.getGrade();
+        const_cast<std::string&>(_name) = rhs._name;
+        _grade = rhs._grade;
     }
     return *this;
 }
@@ -61,7 +58,7 @@ int Bureaucrat::getGrade() const
     return _grade;
 }
 
-void Bureaucrat::_checkGrade(int grade)
+void Bureaucrat::checkGrade(int grade)
 {
     if (grade < 1)
         throw Bureaucrat::GradeTooHighException();
@@ -72,7 +69,7 @@ void Bureaucrat::_checkGrade(int grade)
 void Bureaucrat::incrementGrade(void)
 {
     int new_grade = _grade - 1;
-    _checkGrade(new_grade);
+    checkGrade(new_grade);
     _grade = new_grade;
 }
 
@@ -80,7 +77,7 @@ void Bureaucrat::decrementGrade(void)
 {
     int new_grade = _grade + 1;
     
-    _checkGrade(new_grade);
+    checkGrade(new_grade);
     _grade = new_grade;
 }
 
@@ -94,7 +91,7 @@ const char* Bureaucrat::GradeTooLowException::what(void) const throw()
     return "Grade is too low";
 }
 
-std::ostream& operator<<(std::ostream &out, Bureaucrat const &rhs)
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& rhs)
 {
     out << rhs.getName() << ", bureaucrat grade " << rhs.getGrade();
     return out;
