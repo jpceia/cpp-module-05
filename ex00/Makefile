@@ -6,7 +6,7 @@
 #    By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/04 23:37:29 by jceia             #+#    #+#              #
-#    Updated: 2021/11/20 01:49:32 by jpceia           ###   ########.fr        #
+#    Updated: 2021/12/20 02:37:06 by jpceia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ re: fclean all
 
 # Debug build
 debug:      CXXFLAGS += $(FLAGS_DEBUG)
-debug:      re
+debug:      all
 
 
-.PHONY:     all clean fclean re
+.PHONY:     all clean fclean re debug
