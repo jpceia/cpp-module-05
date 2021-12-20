@@ -30,7 +30,7 @@ protected:
 
 public:
     // Constructors
-    Form(std::string name, int grade);
+    Form(const std::string& name, int grade);
     Form(Form const &rhs);
 
     // Destructor

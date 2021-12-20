@@ -21,41 +21,41 @@ class Bureaucrat
         std::string _name;
         int _grade;
 
-        void _checkGrade(int grade);
-    public:
-        // Constructors
-        Bureaucrat(std::string name, int grade);
-        Bureaucrat(Bureaucrat const &rhs);
 
-        // Destructor
-        ~Bureaucrat();
+public:
+    // Constructors
+    Bureaucrat(const std::string& name, int grade);
+    Bureaucrat(Bureaucrat const &rhs);
 
-        // Assignment operator overload
-        Bureaucrat& operator=(Bureaucrat const &rhs);
+    // Destructor
+    ~Bureaucrat();
 
-        // Ostream operator overload
-        std::ostream &operator<<(std::ostream &out);
+    // Assignment operator overload
+    Bureaucrat& operator=(Bureaucrat const &rhs);
 
-        // Getters
-        std::string getName() const;
-        int getGrade() const;
+    // Ostream operator overload
+    std::ostream &operator<<(std::ostream &out);
 
-        // Increment and decrement
-        void incrementGrade(void);
-        void decrementGrade(void);
+    // Getters
+    std::string getName() const;
+    int getGrade() const;
 
-        // Exceptions
-        class GradeTooHighException : public std::exception
-        {
-            public:
-                virtual const char* what(void) const throw();
-        };
-        
-        class GradeTooLowException : public std::exception
-        {
-            public:
-                virtual const char* what(void) const throw();
-        };
+    // Increment and decrement
+    void incrementGrade(void);
+    void decrementGrade(void);
+
+    // Exceptions
+    class GradeTooHighException : public std::exception
+    {
+        public:
+            virtual const char* what(void) const throw();
+    };
+    
+    class GradeTooLowException : public std::exception
+    {
+        public:
+            virtual const char* what(void) const throw();
+    };
 };
 
 // Ostream operator overload

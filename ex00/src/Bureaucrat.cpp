@@ -13,7 +13,8 @@
 #include "Bureaucrat.hpp"
 #include <iostream>
 
-Bureaucrat::Bureaucrat(std::string name, int grade)
+
+Bureaucrat::Bureaucrat(const std::string& name, int grade)
     : _name(name), _grade(grade)
 {
     #ifdef DEBUG

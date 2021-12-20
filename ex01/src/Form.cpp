@@ -21,7 +21,7 @@ Form::Form(void) :
 {
 }
 
-Form::Form(std::string name, int grade) :
+Form::Form(const std::string& name, int grade) :
     _name(name),
     _signed(false),
     _grade(grade)

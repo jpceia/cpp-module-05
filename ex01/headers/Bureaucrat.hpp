@@ -31,7 +31,7 @@ protected:
 
 public:
     // Constructors
-    Bureaucrat(std::string name, int grade);
+    Bureaucrat(const std::string& name, int grade);
     Bureaucrat(Bureaucrat const &rhs);
 
     // Destructor
