@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 04:36:00 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 04:56:15 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 19:52:12 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& rhs
 
 PresidentialPardonForm::~PresidentialPardonForm(void)
 {
+}
+
+PresidentialPardonForm& PresidentialPardonForm::operator= (const PresidentialPardonForm& rhs)
+{
+    Form::operator=(rhs);
+    return (*this);
 }
 
 void PresidentialPardonForm::action(void) const

@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 04:39:34 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 05:47:45 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 19:52:10 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& rhs) :
 
 RobotomyRequestForm::~RobotomyRequestForm(void)
 {
+}
+
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& rhs)
+{
+    Form::operator=(rhs);
+    return (*this);
 }
 
 void RobotomyRequestForm::action(void) const

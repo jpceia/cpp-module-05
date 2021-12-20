@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 03:55:44 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 04:56:19 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 19:52:19 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& rhs) :
 
 ShrubberyCreationForm::~ShrubberyCreationForm(void)
 {
+}
+
+ShrubberyCreationForm& ShrubberyCreationForm::operator= (const ShrubberyCreationForm& rhs)
+{
+    Form::operator=(rhs);
+    return (*this);
 }
 
 void ShrubberyCreationForm::action(void) const

@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 23:40:25 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 04:55:08 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 19:44:57 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
     ~RobotomyRequestForm(void);
 
     // Assignment operator overload
-    using Form::operator=;
+    RobotomyRequestForm& operator=(const RobotomyRequestForm& rhs);
 
     // Other methods
     void execute(const Bureaucrat& executor) const;

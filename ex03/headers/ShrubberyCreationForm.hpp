@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 23:40:28 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 04:55:12 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 19:50:05 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
     ~ShrubberyCreationForm(void);
 
     // Assignment operator overload
-    using Form::operator=;
+    ShrubberyCreationForm& operator=(const ShrubberyCreationForm& rhs);
 
     // Other methods
     void execute(const Bureaucrat& executor) const;

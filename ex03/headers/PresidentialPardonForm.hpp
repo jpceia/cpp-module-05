@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 23:44:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 04:55:04 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 19:43:35 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
     ~PresidentialPardonForm(void);
 
     // Assignment operator overload
-    using Form::operator=;
+    PresidentialPardonForm& operator=(const PresidentialPardonForm& rhs);
 
     // Other methods
     void execute(const Bureaucrat& executor) const;
